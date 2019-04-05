@@ -44,7 +44,7 @@ public class MainController {
 	@FXML private Button btnMin10;
 	@FXML private Button btnMin11;
 	@FXML private Button btnMin12;
-	Button[] minList;
+	private Button[] minList;
 
 	//Quantity text fields
 	@FXML private TextField txtQty1;
@@ -59,7 +59,7 @@ public class MainController {
 	@FXML private TextField txtQty10;
 	@FXML private TextField txtQty11;
 	@FXML private TextField txtQty12;
-	TextField[] qtyList;
+	private TextField[] qtyList;
 
 	//Checkout Button
 	@FXML private Button btnCheck;
@@ -68,12 +68,12 @@ public class MainController {
 	static ItemList list = new ItemList(); //Package static visibility to allow "TotalController" access
 
 	//Field Variables
-	private ArrayList<Item> menuItems = new ArrayList<Item>(); //ArrayList of Menu Items
+	private ArrayList<Item> menuItems = list.getMenuItems();   //ArrayList of Menu Items
     private ArrayList<Item> custOrder = list.getCustOrder();   //ArrayList of customer order
 
 	@FXML private void initialize() {
-		//Retrieve Menu Items data from MenuItems.txt and store into menuItems array
-		loadMenuItems();
+		//Retrieve Menu Items data from MenuItems.txt
+		list.loadMenuItems();
 
 		//Initialize minus button array
 		minList = new Button[]{btnMin1, btnMin2, btnMin3, btnMin4, btnMin5, btnMin6,
@@ -117,38 +117,6 @@ public class MainController {
         	btnMin12.setOnAction(e -> {onMinClicked(11);});
 
     }
-
-	public void loadMenuItems(){
-		//Retrieve data from MenuItems.txt and store into menuItems array
-			Scanner reader = null;
-			try {
-				File fileDescriptor = new File("data/MenuItems.txt");
-				reader = new Scanner(fileDescriptor);
-
-				while (reader.hasNext()) {
-					String record = reader.nextLine();
-
-					//Split String into separate fields
-					String[] fields = record.split(",");
-					String itemName = fields[0];                        // item name
-					double itemPrice = Double.parseDouble(fields[1]);   // item price
-
-					Item pNew = new Item(itemName, itemPrice);
-					menuItems.add(pNew);
-
-				}
-				//System.out.println(menuItems);
-
-			} catch (FileNotFoundException e) {
-				System.out.println("Error in your MenuItems.txt");
-				//e.printStackTrace(); //   Add error recovery here if needed
-
-			}finally {
-				if (reader != null) {
-					reader.close();
-				}
-			}
-	}
 
 	public void onPlusClicked(int plusIndex){
 		//Take the item's quantity add 1
@@ -201,7 +169,5 @@ public class MainController {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-
-
 	}
 }

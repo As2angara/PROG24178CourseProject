@@ -33,12 +33,12 @@
       </Label>
       <ImageView fitHeight="200.0" fitWidth="615.0" layoutX="285.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Users/Adrian%20Angara/Pictures/Java2_final_project_images/denGrilledCheese2.jpg" />
+            <Image url="@../../images/denGrilledCheese2.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Users/Adrian%20Angara/Pictures/Java2_final_project_images/thedenlogo.png" />
+            <Image url="@../../images/thedenlogo.png" />
          </image>
       </ImageView>
       <Separator layoutX="33.0" layoutY="256.0" prefHeight="1.0" prefWidth="384.0" style="-fx-background-color: #fcb040;" />
