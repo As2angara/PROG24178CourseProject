@@ -1,0 +1,15 @@
+Den Burger,12.50
+Den BLT, 9.00
+Triple Decker Club,12.00
+Buffalo Chicken Wrap,12.00
+Grilled Cheese,8.00
+Mac N' Cheese,11.00
+French Fries,5.50
+Onion Rings, 6.00
+Caesar Salad,5.00
+Soup of the Day,4.50
+Monkey Business,6.00
+Cake Slice,5.50
+
+
+
