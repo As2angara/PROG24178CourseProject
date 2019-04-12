@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TotalController">
+   <children>
+      <ImageView fitWidth="900.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 0.4;">
+         <image>
+            <Image url="@../../images/DAV_the_Den2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="487.0" layoutX="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/thedenlogo2.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="200.0" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #f5f5f5;">
+         <children>
+            <Pane layoutX="50.0" layoutY="50.0" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Label layoutX="26.0" layoutY="20.0" text="Your Order:" textFill="#fcb040">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtItems" editable="false" layoutX="23.0" layoutY="56.0" prefHeight="321.0" prefWidth="277.0" style="-fx-background-color: #fff;">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="txtQty" editable="false" layoutX="300.0" layoutY="56.0" prefHeight="321.0" prefWidth="77.0" style="-fx-background-color: #fff;">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="txtPrice" editable="false" layoutX="377.0" layoutY="56.0" prefHeight="321.0" prefWidth="96.0" style="-fx-background-color: #fff;">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </Pane>
+            <Pane layoutX="600.0" layoutY="50.0" prefHeight="250.0" prefWidth="250.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Label layoutX="22.0" layoutY="22.0" text="Summary:" textFill="#fcb040">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="25.0" layoutY="57.0" prefWidth="200.0" />
+                  <Separator layoutX="25.0" layoutY="179.0" prefWidth="200.0" />
+                  <Label layoutX="25.0" layoutY="66.0" text="Total:" textFill="#58585a">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="104.0" text="Tax:" textFill="#58585a">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="139.0" text="Delivery:" textFill="#58585a">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotal" layoutX="176.0" layoutY="66.0" text="\$0.00" textFill="#58585a">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTax" layoutX="176.0" layoutY="104.0" text="\$0.00" textFill="#58585a">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="176.0" layoutY="139.0" text="\$5.00" textFill="#58585a">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalCost" layoutX="176.0" layoutY="193.0" text="\$0.00" textFill="#58585a">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="193.0" text="Checkout:" textFill="#58585a">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane layoutX="600.0" layoutY="350.0" prefHeight="100.0" prefWidth="250.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Button fx:id="btnPay" layoutX="31.0" layoutY="23.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="188.0" style="-fx-background-color: #58585a;" text="Confirm Payment" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

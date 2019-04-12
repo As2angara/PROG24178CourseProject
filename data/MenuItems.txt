@@ -1,0 +1,15 @@
+Den Burger,12.50,false
+Den BLT, 9.00,false
+Triple Decker Club,12.00,false
+Buffalo Chicken Wrap,12.00,false
+Grilled Cheese,8.00,false
+Mac N' Cheese,11.00,false
+French Fries,5.50,false
+Onion Rings, 6.00,false
+Caesar Salad,5.00,false
+Soup of the Day,4.50,false
+Monkey Business,6.00,false
+Cake Slice,5.50,false
+
+
+
